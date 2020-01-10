@@ -1,0 +1,45 @@
+package br.com.resource.controller.entidades;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
+public class Perguntas {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	@Column(nullable = false)
+	private String tecnologiaP;
+	
+	@Column(nullable = false)
+	private String tecnologiaC;
+	
+	@Column(nullable = false)
+	private String certificacoes;
+	
+	@Column(nullable = false)
+	private String temExp;
+	
+	@Column(nullable = false)
+	private String restricao;
+	
+	@Column(nullable = false)
+	private String interesse;
+	
+	@Column(nullable = false)
+	private String beneficios;
+	
+	@Column(nullable = false)
+	private String temasInte;
+	
+	@Column(nullable = false)
+	private String temaEnsi;
+	
+
+}

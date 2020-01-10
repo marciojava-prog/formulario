@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yes, teste</title>
+</head>
+<body>
+<div container>
+	<a href="/pergunta">Responda aqui o questionario dos Alocados da Quintess</a>
+</div>
+</body>
+</html>

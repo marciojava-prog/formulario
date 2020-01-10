@@ -1,0 +1,38 @@
+package br.com.resource.controller.entidades;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+
+@org.hibernate.annotations.Entity
+public class Perguntas {
+	
+	@Column(nullable = false)
+	private String tecnologiaP;
+	
+	@Column(nullable = false)
+	private String tecnologiaC;
+	
+	@Column(nullable = false)
+	private String certificacoes;
+	
+	@Column(nullable = false)
+	private String temExp;
+	
+	@Column(nullable = false)
+	private String restricao;
+	
+	@Column(nullable = false)
+	private String interesse;
+	
+	@Column(nullable = false)
+	private String beneficios;
+	
+	@Column(nullable = false)
+	private String temasInte;
+	
+	@Column(nullable = false)
+	private String temaEnsi;
+	
+
+}

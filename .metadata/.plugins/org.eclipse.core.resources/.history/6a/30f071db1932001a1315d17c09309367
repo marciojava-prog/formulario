@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yes, teste</title>
+</head>
+<body>
+<div container>
+	<a href="/pergunta">Responda aqui o questionario dos Alocados da Quintess</a>
+	<div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+	
+</div>
+</body>
+</html>
