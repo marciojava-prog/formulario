@@ -1,7 +1,10 @@
 package br.com.resource.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,16 +18,16 @@ public class PerguntaController {
 	@Autowired
 	private PerguntaDao perguntaDao;
 	
-	@RequestMapping(value = "/cadastrarPergunta", method = RequestMethod.GET)
-	public String form() {
-		return "pergunta";
-	}
-	@RequestMapping(value = "/cadastrarPergunta", method = RequestMethod.POST)
-	public String form(Pergunta pergunta) {
+//	@RequestMapping(value = "/cadastrarPergunta", method = RequestMethod.GET)
+//	public String form() {
+//		return "pergunta";
+//	}
+	
+	@PostMapping(value = "/cadastrarPergunta")
+	public String form(@ModelAttribute("pergunta") Pergunta pergunta) {
 		
-		
-		
-		return "redirect:/cadastrarPergunta";
-	}
+		perguntaDao.save(pergunta);
 
+		return "redirect:/pergunta";
+	}
 }

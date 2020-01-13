@@ -14,34 +14,57 @@ public class Pergunta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
+	private String formacao;
+	
+	@Column(nullable = true)
 	private String tecnologiaP;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String tecnologiaC;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String certificacoes;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String temExp;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String restricao;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String interesse;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String beneficios;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String temasInte;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String temaEnsi;
 	
+	@Column(nullable = true)
+	private String idioma;
 	
+	@Column(nullable = true)
+	private Boolean filhos;
+	
+	@Column(nullable = true)
+	private Integer qtdeFilhos;
+	
+	@Column(nullable = true)
+	private String idadeFilhos;
+	
+	
+	
+	public String getFormacao() {
+		return formacao;
+	}
+
+	public void setFormacao(String formacao) {
+		this.formacao = formacao;
+	}
 
 	public int getId() {
 		return id;
@@ -122,6 +145,39 @@ public class Pergunta {
 	public void setTemaEnsi(String temaEnsi) {
 		this.temaEnsi = temaEnsi;
 	}
-	
 
+	public String getIdioma() {
+		return idioma;
+	}
+
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
+
+	public Boolean getFilhos() {
+		return filhos;
+	}
+
+	public void setFilhos(Boolean filhos) {
+		this.filhos = filhos;
+	}
+
+	public Integer getQtdeFilhos() {
+		return qtdeFilhos;
+	}
+
+	public void setQtdeFilhos(Integer qtdeFilhos) {
+		this.qtdeFilhos = qtdeFilhos;
+	}
+
+	public String getIdadeFilhos() {
+		return idadeFilhos;
+	}
+
+	public void setIdadeFilhos(String idadeFilhos) {
+		this.idadeFilhos = idadeFilhos;
+	}
+	
+	
+	
 }

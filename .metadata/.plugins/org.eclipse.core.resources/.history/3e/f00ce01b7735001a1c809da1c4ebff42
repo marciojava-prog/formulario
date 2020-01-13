@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Questionario RH</title>
+<spring:url value="/pergunta/salva" var="salva"></spring:url>
+<link href='<spring:url value="/resources/css/bootstrap.min.css"/>'
+	rel="stylesheet" />
+<script src='<spring:url value="resources/js/jquery-3.4.1.min.js"/>'></script>
+<script src='<spring:url value="resources/js/bootstrap.min.js"/>'></script>
+</head>
+<body>
+	<h1>Perguntas</h1>
+
+	<form:form method="post" modelAttribute="pergunta"
+		action="/pergunta/cadastrarPergunta">
+
+		<label>Você atua na área técnica?</label>
+		<select name="perfil">
+			<option>Sim</option>
+			<option>Não</option>
+		</select>
+		<br/>
+
+		<label>Qual a tecnologia principal ou atividade que executa?</label>
+		<input type="text" name="tecnologiaP" />
+		<br />
+
+		<label>Possui conhecimento em outra tecnologia?</label>
+		<input type="text" name="tecnologiaC" />
+		<br/>
+
+		<label>Formação Acadêmica</label>
+		<select name="formacao">
+			<option disabled selected hidden>Selecione...</option>
+			<option>Ensino médio</option>
+			<option>Ensino superior incompleto</option>
+			<option>Ensino superior completo</option>
+			<option>Pós-graduado</option>
+		</select>
+		<br/>
+
+		<p>Possui certificações?</p>
+		<input type="text" name="certificacoes" />
+		<br/>
+
+		<label>Tempo de experiência na área na função atual</label>
+		<select name="temExp">
+			<option disabled selected hidden>Selecione...</option>
+			<option>Menos de 1 ano</option>
+			<option>De 1 a 2 anos</option>
+			<option>De 2 a 3 anos</option>
+			<option>Mais que 3 anos</option>
+		</select>
+		<br/>
+
+		<label>Idiomas</label>
+		<select name=idioma onchange="changeEventHandler(event);">
+			<option disabled selected hidden>Selecione...</option>
+			<option>Inglês</option>
+			<option>Espanhol</option>
+			<option>Outros</option>
+		</select>
+		<br/>
+		
+		<div id="espeficIdioma" style="display:none">
+			<label>Especifique</label>
+			<input type="text" name="idioma" />
+		</div>
+
+		<button type="submit" class="btn btn-primary">Confirmar</button>
+	</form:form>
+
+</body>
+
+
+<script type="text/javascript">
+	function changeEventHandler(event) {
+		if (event.target.value == 'Outros') {
+			document.getElementById("espeficIdioma").style.display = "block";
+		}
+	}
+</script>
+
+</html>
