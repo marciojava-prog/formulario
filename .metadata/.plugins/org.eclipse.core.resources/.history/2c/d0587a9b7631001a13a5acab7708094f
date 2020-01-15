@@ -1,5 +1,0 @@
-package br.com.resource.dao;
-
-public interface PerguntaDao {
-
-}

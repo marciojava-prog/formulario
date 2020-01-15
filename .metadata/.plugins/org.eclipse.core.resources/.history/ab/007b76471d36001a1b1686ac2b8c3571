@@ -1,0 +1,11 @@
+spring.datasource.url=jdbc:postgresql://localhost:5432/projetofinal
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=postgres
+spring.datasource.password=1706
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+
+

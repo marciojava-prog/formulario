@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alocados</title>
+<style>
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+</style>
+
+</head>
+<body>
+
+
+
+         <p>In the above example, I use the class .control to indicate which fields are the control and .conditional to indicate what will be displayed when the control is checked.  I use sibling selectors (<code>~</code>) to tie the conditional to the control</p>
+		<p>You can get creative with IDs to show fields based on certain values only:</p>
+		<form action="">
+						<input type="radio" name="residency" value="Citizen" id="citizen">
+						<label for="citizen">Não</label>
+				
+						<input type="radio" name="residency" value="Immigrant" id="immigrant">
+						<label for="immigrant">Immigrant</label>
+						<fieldset class="conditional">
+							
+									<label for="country_citizenship">Country of Citizenship</label>
+									<input type="text" id="country_citizenship">
+								
+									<label for="visa_type">Type of Visa</label>
+									<input type="text" id="visa_type">
+							
+						</fieldset>
+			
+		</form>
+		
+</body>
+</html>

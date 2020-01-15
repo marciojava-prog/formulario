@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alocados</title>
+<style >body{
+
+	background-image: url(./resources/fundo2.png);
+	background-attachment: fixed;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: #000;
+	
+	
+}
+</head>
+<body>
+
+	<a href="/pergunta">Responda o questionario de alocados da Quintess</a>
+	
+	
+
+</body>
+</html>

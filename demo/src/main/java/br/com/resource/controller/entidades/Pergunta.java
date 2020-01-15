@@ -18,6 +18,17 @@ public class Pergunta {
 	private String formacao;
 	
 	@Column(nullable = true)
+	private String perfilTec;
+	
+	public String getPerfilTec() {
+		return perfilTec;
+	}
+
+	public void setPerfilTec(String perfilTec) {
+		this.perfilTec = perfilTec;
+	}
+
+	@Column(nullable = true)
 	private String tecnologiaP;
 	
 	@Column(nullable = true)
@@ -48,10 +59,10 @@ public class Pergunta {
 	private String idioma;
 	
 	@Column(nullable = true)
-	private Boolean filhos;
+	private String filhos;
 	
 	@Column(nullable = true)
-	private Integer qtdeFilhos;
+	private String qtdeFilhos;
 	
 	@Column(nullable = true)
 	private String idadeFilhos;
@@ -152,21 +163,21 @@ public class Pergunta {
 
 	public void setIdioma(String idioma) {
 		this.idioma = idioma;
-	}
+	}	
 
-	public Boolean getFilhos() {
+	public String getFilhos() {
 		return filhos;
 	}
 
-	public void setFilhos(Boolean filhos) {
+	public void setFilhos(String filhos) {
 		this.filhos = filhos;
 	}
 
-	public Integer getQtdeFilhos() {
+	public String getQtdeFilhos() {
 		return qtdeFilhos;
 	}
 
-	public void setQtdeFilhos(Integer qtdeFilhos) {
+	public void setQtdeFilhos(String qtdeFilhos) {
 		this.qtdeFilhos = qtdeFilhos;
 	}
 

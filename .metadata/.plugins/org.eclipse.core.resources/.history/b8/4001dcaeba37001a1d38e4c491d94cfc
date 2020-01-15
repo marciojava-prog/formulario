@@ -1,0 +1,133 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Alocados</title>
+<style>
+.control:checked ~ .conditional,
+			#immigrant:checked ~ .conditional,
+			#required-2:checked ~ .conditional
+			#option-2:checked ~ .conditional {
+				clip: auto;
+				height: auto;
+				margin: 0;
+				overflow: visible;
+				position: static;
+				width: auto;
+			}
+
+			.control:not(:checked) ~ .conditional,
+			#immigrant:not(:checked) ~ .conditional,
+			#required-2:not(:checked) ~ .conditional,
+			#option-2:not(:checked) ~ .conditional {
+				border: 0;
+				clip: rect(0 0 0 0);
+				height: 1px;
+				margin: -1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+				width: 1px;
+			}
+</style>
+
+</head>
+<body>
+
+
+	<a href="/pergunta">Responda o questionario de alocados da Quintess</a>
+	
+	
+		<form action="">
+			<input type="checkbox" id="requirement" class="control">
+			<label for="requirement">Check me</label>
+			<fieldset class="conditional">
+							
+									<label for="option">Related subfield</label>
+									<input type="text" id="option">
+								</li>
+							</ol>
+						</fieldset>
+					</li>
+					<li>
+						<input type="radio" id="radio" class="control">
+						<label for="radio">Radio</label>
+						<fieldset class="conditional">
+							<ol>
+								<li>
+									<label for="option">Related subfield</label>
+									<input type="text" id="option">
+								</li>
+							</ol>
+						</fieldset>
+					</li>
+				</ol>
+			</fieldset>
+		</form>
+            <p>In the above example, I use the class .control to indicate which fields are the control and .conditional to indicate what will be displayed when the control is checked.  I use sibling selectors (<code>~</code>) to tie the conditional to the control</p>
+		<p>You can get creative with IDs to show fields based on certain values only:</p>
+		<form action="">
+			<fieldset>
+				<ol>
+					<li>
+						<input type="radio" name="residency" value="Citizen" id="citizen">
+						<label for="citizen">Citizen</label>
+					</li>
+					<li>
+						<input type="radio" name="residency" value="Immigrant" id="immigrant">
+						<label for="immigrant">Immigrant</label>
+						<fieldset class="conditional">
+							<ol>
+								<li>
+									<label for="country_citizenship">Country of Citizenship</label>
+									<input type="text" id="country_citizenship">
+								</li>
+								<li>
+									<label for="visa_type">Type of Visa</label>
+									<input type="text" id="visa_type">
+								</li>
+							</ol>
+						</fieldset>
+					</li>
+				</ol>
+			</fieldset>
+		</form>
+		<p>You can even nest them.</p>
+		<form action="">
+			<fieldset>
+				<ol>
+					<li>
+						<input type="checkbox" id="requirement-2" class="control">
+						<label for="requirement-2">Check me</label>
+						<fieldset class="conditional">
+							<ol>
+								<li>
+									<label for="option-2">Related subfield</label>
+									<input type="checkbox" id="option-2">
+									<fieldset class="conditional">
+										<ol>
+											<li>
+												<label for="country_citizenship">Country of Citizenship</label>
+												<input type="text" id="country_citizenship">
+											</li>
+											<li>
+												<label for="visa_type">Type of Visa</label>
+												<input type="text" id="visa_type">
+											</li>
+										</ol>
+									</fieldset>
+								</li>
+							</ol>
+						</fieldset>
+					</li>
+				</ol>
+			</fieldset>
+		</form>
+		<p>I haven't thought of a way to make this work with the <code>.conditional</code> in a different part of the form as it relies on an element being either a sibling or parent to be the control. </p>
+	
+	
+
+</body>
+</html>
